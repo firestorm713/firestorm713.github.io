@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Unity Web Player | Looby</title>
+		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
+		<script type="text/javascript">
+		<!--
+		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+		if (document.location.protocol == 'https:')
+			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+		-->
+		</script>
+		<script type="text/javascript">
+		<!--
+			var config = {
+				width: 960, 
+				height: 600,
+				params: { enableDebugging:"0" }
+				
+			};
+			var u = new UnityObject2(config);
+
+			jQuery(function() {
+
+				var $missingScreen = jQuery("#unityPlayer").find(".missing");
+				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+				$missingScreen.hide();
+				$brokenScreen.hide();
+				
+				u.observeProgress(function (progress) {
+					switch(progress.pluginStatus) {
+						case "broken":
+							$brokenScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$brokenScreen.show();
+						break;
+						case "missing":
+							$missingScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$missingScreen.show();
+						break;
+						case "installed":
+							$missingScreen.remove();
+						break;
+						case "first":
+						break;
+					}
+				});
+				u.initPlugin(jQuery("#unityPlayer")[0], "Looby.unity3d");
+			});
+		-->
+		</script>
+		<!-- Manual files -->
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+
+		<!-- Bootstrap files -->
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+		<script src="../js/bootstrap.min.js"></script>
+
+		<!-- jQuery/jQueryUI files -->
+		<link rel="stylesheet" type="text/css" href="../css/jquery-ui-1.10.4.custom.min.css">
+		<script src="../js/jquery-1.10.2.js"></script>
+		<script src="../js/jquery-ui-1.10.4.custom.min.js"></script>
+	</head>
+	<body>
+	
+	<div class="container">
+		<div class="row header-top-margin">
+			<div class="col-md-8">
+				<h1>Andrew Quesenberry</h1>
+			</div>
+			<div class="col-md-4">
+				<a class="btn btn-link pull-right header-link-margin" href = "../resume.html">Resume</a>
+				<a class="btn btn-link pull-right header-link-margin" href = "https://github.com/firestorm713" >GitHub</a>
+				<a class="btn btn-link pull-right header-link-margin" href = "../portfolio.html">Portfolio</a>
+				<a class="btn btn-link pull-right header-link-margin" href = "../index.html">Home</a>
+			</div>
+		</div>
+		
+		<p class="header"><span>Unity Web Player | </span>Looby</p>
+		<div class="content">
+			<div id="unityPlayer">
+				<div class="missing">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+					</a>
+				</div>
+				<div class="broken">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
+						<img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
+					</a>
+				</div>
+			</div>
+		</div>
+		Controls: Left/Right arrow keys to move left and right, Up arrow key to jump<br/>
+		This was a project I helped work on for my Software Engineering Class, with Austin Stoner and Abel Sanchez. Our client was Synaptic Switch, a local mobile game studio, who gave us the project so they could focus on others. <br/>
+		I worked specifically on the controls for running, moving left and right, flying (not featured), and the controls for the rail grinding. I also developed the procedural spawning system for everything beyond the basics.
+		<br/>
+		<p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+		<p class = "text-center"><h6>Contact me at <a href = "mailto:andrew.quesenberry713@gmail.com">andrew.quesenberry713@gmail.com</a></h6></p>
+	</body>
+</html>
