@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="dive.css" />
+	<head>
+	<script src="source1.js"></script>
+	</head>
+	<body>
+		<!--Octaves: <select id="octaves">
+			<option value=1>1</option>
+			<option value=2>2</option>
+			<option value=3>3</option>
+			<option value=4>4</option>
+			<option value=5>5</option>
+			<option value=6>6</option>
+			<option value=7>7</option>
+			<option value=8>8</option>
+		</select>-->
+		Base Texture: <select id="baseTexture" onchange = "PresetChange();">
+			<option value="blank">Blank</option>
+			<option value="vsin">Vertical Sine Function</option>
+			<option value="hsin">Horizontal Sine Function</option>
+			<option value="circsin">Circular Sine Function</option>
+			<option value="diagsin">Diagonal Sine Function</option>
+		</select>
+		Period: <input type = "number" id = "period" value = "3.1415" onChange="periodChange()"></input>
+		<!--Seed: <input type="number" id = "seed" value = "84951698741"></input>-->
+		<button onclick="draw();">Generate Texture</button>
+		<br/><canvas id="perlin" width="512" height="512"></canvas>
+</body>
+</html>

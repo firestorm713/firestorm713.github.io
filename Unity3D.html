@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unity Projects</title>
+<!-- Manual files -->
+<link rel="stylesheet" type="text/css" href="css/index.css">
+
+<!-- Bootstrap files -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+<script src="js/bootstrap.min.js"></script>
+
+<!-- jQuery/jQueryUI files -->
+<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.4.custom.min.css">
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="row header-top-margin">
+			<div class="col-md-8">
+				<h1>Andrew Quesenberry</h1>
+			</div>
+			<div class="col-md-4">
+				<a class="btn btn-link pull-right header-link-margin" href = "resume.html">Resume</a>
+				<a class="btn btn-link pull-right header-link-margin" href = "https://github.com/firestorm713" >GitHub</a>
+				<a class="btn btn-link pull-right header-link-margin" href = "portfolio.html">Portfolio</a>
+				<a class="btn btn-link pull-right header-link-margin" href = "index.html">Home</a>
+			</div>
+		</div>
+		
+		<hr class="hr" />
+		
+		<h3> <a href="ProjectACIDA/ProjectACIDA.html">Project ACIDA [New Features WIP]</a></h3>
+		<img src="ACIDA.png" alt="Real Time Marching Squares Deformation!" width=419 height=190 /><br/>
+		This was an implementation of Marching Squares in Unity. I used an entry in the Unify Community Wiki for Unity3D (<a href ="http://wiki.unity3d.com/index.php?title=MarchingSquares"> MarchingSquares</a>), and modified it so that the generated mesh could be deformed in real time, and after reaching a certain threshold, would disappear. This was my primary responsibility on Project ACIDA, a game two other students and I made for our Video Game Design Course. 
+		Possible Updates Include: The ability to split asteroids (using a*), the ability for concave asteroids to collide, and the ability to have a true material instead of a single diffuse color.
+		<a href = "https://github.com/firestorm713/ProjectAcida">(Source)</a>
+		<br/>
+		<h3> <a href="Ocean/Oceanstuff.html">Ocean Shader [WIP] </a> </h3>
+		This is an implementation of Jerry Tessendorf's whitepaper "Simulating Ocean Water." It uses an FFT method to calculate the height at any given point on the surface, based on a statistical wave model.
+		Possible Updates Include: Converting all surface deformation into OpenCL or CUDA, Automatic Underwater transition, Terrain Interaction (with Unity's Terrain system), Object Interaction via Cem Yukse's whitepaper "Wave Particles."<a href = "https://github.com/firestorm713/ShaderExperiments">(Source)</a>
+		<br/>
+		<h3> Intergalactic Looby[WIP]</h3>
+		This is a game based on Temple Run and Sonic Dash I helped make while working for Synaptic Switch. It started out as our project for our Software Engineering class, where we are required to find a client who needs a product. Synaptic hired us on as interns for a semester, delivering weekly milestones and prototyping underdesigned elements, such as flying and grindrails, as well as monthly presentations to our class about our progress. It culminated in two things for us: a presentation at our university's Student Showcase(link), and jobs with Synaptic Switch. My responsibility was implementing the movement mechanics. Jumping, moving side to side, flying, grinding on rails, and each new track from the artist. To help accomplish these goals, I utilized iTween, a free tweening plugin for Unity that helped me smooth movements on the rails. For NDA reasons, I cannot provide the source, but I can show a web build, and the link to the game in the iOS App Store (currently awaiting release).
+		<br/><br/>
+		<p class = "text-center"><h6>Contact me at <a href = "mailto:andrew.quesenberry713@gmail.com">andrew.quesenberry713@gmail.com</a></h6></p>
+	</div>
+</body>
+
+</html>

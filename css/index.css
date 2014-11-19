@@ -1,0 +1,26 @@
+.header-top-margin
+{
+	margin-top: 20px;
+}
+
+.header-link-margin
+{
+	margin-top: 35px;
+}
+
+.hr
+{
+	background:black;
+	border:0;
+	height:2px
+}
+
+.index-text-margin
+{
+	margin-top: 20px;
+}
+
+.ui-icon.inline
+{
+	display: inline-block;
+}
