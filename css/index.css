@@ -24,3 +24,27 @@
 {
 	display: inline-block;
 }
+/*Begin Andrew's Code
+.body-color{
+	background:#3C2323;
+}
+.container
+{
+	background:#4A0000;
+}
+.col-md-4
+{
+	background:#002c2c
+}
+.btn:link
+{
+	color:#001010
+}
+.btn:visited
+{
+	color:#2e4848
+}
+.btn:hover
+{
+	color:white
+}/* end Andrew's Code */
