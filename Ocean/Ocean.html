@@ -103,11 +103,7 @@
 				</div>
 			</div>
 		</div>
-		The primary points of this were to mess with various parts of shaders and to start working toward using Tessendorf's Ocean Wave simulation system.
-		Currently, what it does is calculates longitudinal and transverse waves based on sine for y direction and a cosine wave for the x direction.
-		The plane isn't simply animated, but is displaced according to a height map.
-		For each pixel on the height map, the normal and tangent are calculated, and passed into the shader.
-		The transparency and color are also based on the height, and are calculated on the fly.
+		This is an implementation of Jerry Tessendorf's paper <a href = "http://graphics.ucsd.edu/courses/rendering/2005/jdewall/tessendorf.pdf">"Simulating Ocean Water."</a> It generates a random wave field, then animates it using a CPU based Fast Fourier Transform. Click on the compass to change the wind direction, and click the slider to change the wind intensity.
 		<p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
 		<p class = "text-center"><h6>Contact me at <a href = "mailto:andrew.quesenberry713@gmail.com">andrew.quesenberry713@gmail.com</a></h6></p>
 </body>
