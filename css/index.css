@@ -18,20 +18,46 @@
 .index-text-margin
 {
 	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .ui-icon.inline
 {
 	display: inline-block;
 }
-/*Begin Andrew's Code
+/*Begin Andrew's Code*/
+/*
 .body-color{
 	background:#3C2323;
+	color: white;
 }
 .container
 {
 	background:#4A0000;
 }
+*/
+@font-face
+{
+	font-family: wireframe;
+	src:url(../fonts/the_wireframe_demo.otf)
+}
+
+.col-md-8
+{
+	font-family: "wireframe";
+}
+
+.body-color{
+	font-family: "Lucida Console";
+}
+
+.container
+{
+	font-family: "Lucida Console";
+}
+
+/*
 .col-md-4
 {
 	background:#002c2c
@@ -47,4 +73,6 @@
 .btn:hover
 {
 	color:white
-}/* end Andrew's Code */
+}
+*/
+/* end Andrew's Code */
