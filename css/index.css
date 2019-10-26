@@ -1,78 +1,93 @@
 .header-top-margin
 {
-	margin-top: 20px;
+    margin-top: 20px;
 }
 
 .header-link-margin
 {
-	margin-top: 35px;
+    margin-top: 35px;
 }
 
 .hr
 {
-	background:black;
-	border:0;
-	height:2px
+    background:black;
+    border:0;
+    height:2px
 }
 
 .index-text-margin
 {
-	margin-top: 20px;
-	margin-left: auto;
-	margin-right: auto;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .ui-icon.inline
 {
-	display: inline-block;
+    display: inline-block;
 }
-/*Begin Andrew's Code*/
+/*Begin Adalynne's Code*/
 /*
 .body-color{
-	background:#3C2323;
-	color: white;
+    background:#3C2323;
+    color: white;
 }
 .container
 {
-	background:#4A0000;
+    background:#4A0000;
 }
 */
 @font-face
 {
-	font-family: wireframe;
-	src:url(../fonts/the_wireframe_demo.otf)
+    font-family: neuropolitical;
+    src:url(../fonts/neuropolitical_rg.tff);
 }
-
+@font-face
+{
+    font-family: 'Designer Block';
+    src:url(../fonts/DESIB___.tff);
+    font-style: normal
+}
 .col-md-8
 {
-	font-family: "wireframe";
+    font-family: "Designer Block";
+}
+@font-face
+{
+    font-family: 'Fira Code';
+    src:url(../fonts/FiraCode_Medium.tff);
+    font-style: normal
 }
 
 .body-color{
-	font-family: "Lucida Console";
+    font-family: "Fira Code";
 }
-
+@font-face
+{
+    font-family: fira_bold;
+    src:url(../fonts/FiraCode_Bold.tff);
+}
 .container
 {
-	font-family: "Lucida Console";
+    font-family: "Fira Code";
 }
 
 /*
 .col-md-4
 {
-	background:#002c2c
+    background:#002c2c
 }
 .btn:link
 {
-	color:#001010
+    color:#001010
 }
 .btn:visited
 {
-	color:#2e4848
+    color:#2e4848
 }
 .btn:hover
 {
-	color:white
+    color:white
 }
-*/
-/* end Andrew's Code */
+
+/* end Adalynne's Code */

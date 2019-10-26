@@ -1,116 +1,116 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Unity Web Player | VGDevAcida</title>
-		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
-		<script type="text/javascript">
-		<!--
-		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
-		if (document.location.protocol == 'https:')
-			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
-		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
-		-->
-		</script>
-		<script type="text/javascript">
-		<!--
-			var config = {
-				width: 960, 
-				height: 600,
-				params: { enableDebugging:"0" }
-				
-			};
-			var u = new UnityObject2(config);
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Unity Web Player | VGDevAcida</title>
+        <script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
+        <script type="text/javascript">
+        <!--
+        var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+        if (document.location.protocol == 'https:')
+            unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+        document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+        -->
+        </script>
+        <script type="text/javascript">
+        <!--
+            var config = {
+                width: 960, 
+                height: 600,
+                params: { enableDebugging:"0" }
+                
+            };
+            var u = new UnityObject2(config);
 
-			jQuery(function() {
+            jQuery(function() {
 
-				var $missingScreen = jQuery("#unityPlayer").find(".missing");
-				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
-				$missingScreen.hide();
-				$brokenScreen.hide();
-				
-				u.observeProgress(function (progress) {
-					switch(progress.pluginStatus) {
-						case "broken":
-							$brokenScreen.find("a").click(function (e) {
-								e.stopPropagation();
-								e.preventDefault();
-								u.installPlugin();
-								return false;
-							});
-							$brokenScreen.show();
-						break;
-						case "missing":
-							$missingScreen.find("a").click(function (e) {
-								e.stopPropagation();
-								e.preventDefault();
-								u.installPlugin();
-								return false;
-							});
-							$missingScreen.show();
-						break;
-						case "installed":
-							$missingScreen.remove();
-						break;
-						case "first":
-						break;
-					}
-				});
-				u.initPlugin(jQuery("#unityPlayer")[0], "ProjectACIDA.unity3d");
-			});
-		-->
-		</script>
-		<!-- Manual files -->
-		<link rel="stylesheet" type="text/css" href="../css/index.css">
+                var $missingScreen = jQuery("#unityPlayer").find(".missing");
+                var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+                $missingScreen.hide();
+                $brokenScreen.hide();
+                
+                u.observeProgress(function (progress) {
+                    switch(progress.pluginStatus) {
+                        case "broken":
+                            $brokenScreen.find("a").click(function (e) {
+                                e.stopPropagation();
+                                e.preventDefault();
+                                u.installPlugin();
+                                return false;
+                            });
+                            $brokenScreen.show();
+                        break;
+                        case "missing":
+                            $missingScreen.find("a").click(function (e) {
+                                e.stopPropagation();
+                                e.preventDefault();
+                                u.installPlugin();
+                                return false;
+                            });
+                            $missingScreen.show();
+                        break;
+                        case "installed":
+                            $missingScreen.remove();
+                        break;
+                        case "first":
+                        break;
+                    }
+                });
+                u.initPlugin(jQuery("#unityPlayer")[0], "ProjectACIDA.unity3d");
+            });
+        -->
+        </script>
+        <!-- Manual files -->
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
 
-		<!-- Bootstrap files -->
-		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
-		<script src="../js/bootstrap.min.js"></script>
+        <!-- Bootstrap files -->
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <script src="../js/bootstrap.min.js"></script>
 
-		<!-- jQuery/jQueryUI files -->
-		<link rel="stylesheet" type="text/css" href="../css/jquery-ui-1.10.4.custom.min.css">
-		<script src="../js/jquery-1.10.2.js"></script>
-		<script src="../js/jquery-ui-1.10.4.custom.min.js"></script>
-	</head>
-	<body>
-	<div class="container">
-		<div class="row header-top-margin">
-			<div class="col-md-8">
-				<h1>Andrew Quesenberry</h1>
-			</div>
-			<div class="col-md-4">
-				<a class="btn btn-link pull-right header-link-margin" href = "../Resume.html">Resume</a>
-				<a class="btn btn-link pull-right header-link-margin" href = "https://github.com/firestorm713" target="_blank">GitHub</a>
-				<a class="btn btn-link pull-right header-link-margin" href = "../portfolio.html">Portfolio</a>
-				<a class="btn btn-link pull-right header-link-margin" href = "../index.html">Home</a>
-			</div>
-		</div>
-		
-		<hr class="hr" />
-		<p class="header"><span>Unity Web Player | </span>VGDevAcida</p>
-		<div class="content">
-			<div id="unityPlayer">
-				<div class="missing">
-					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
-						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
-					</a>
-				</div>
-				<div class="broken">
-					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
-						<img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
-					</a>
-				</div>
-			</div>
-		</div>
-		<p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
-		Controls:<br/>
-		Steer with the mouse, Forward/Reverse - W/S, Left/Right - A/D<br/>
-		Fire - Left Mouse Button<br/>
-		This was our semester project for Video Game Design. I worked on this in a group with Austin Stoner and Cullen McDevitt. I was in charge of making the Asteroids deform with Marching Squares.
-		Each Asteroid is defined by a two dimensional array, which indicates how much each point on the asteroid is damaged. As the player hits the asteroids, they deform. I was also in charge of the basic control system and lasers.<br/>
-		
-		<p class = "text-center"><h6>Contact me at <a href = "mailto:andrew.quesenberry713@gmail.com">andrew.quesenberry713@gmail.com</a></h6></p>
-	</div>
-	</body>
+        <!-- jQuery/jQueryUI files -->
+        <link rel="stylesheet" type="text/css" href="../css/jquery-ui-1.10.4.custom.min.css">
+        <script src="../js/jquery-1.10.2.js"></script>
+        <script src="../js/jquery-ui-1.10.4.custom.min.js"></script>
+    </head>
+    <body>
+    <div class="container">
+        <div class="row header-top-margin">
+            <div class="col-md-8">
+                <h1>Adalynne Quesenberry</h1>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-link pull-right header-link-margin" href = "../Resume.html">Resume</a>
+                <a class="btn btn-link pull-right header-link-margin" href = "https://github.com/firestorm713" target="_blank">GitHub</a>
+                <a class="btn btn-link pull-right header-link-margin" href = "../portfolio.html">Portfolio</a>
+                <a class="btn btn-link pull-right header-link-margin" href = "../index.html">Home</a>
+            </div>
+        </div>
+        
+        <hr class="hr" />
+        <p class="header"><span>Unity Web Player | </span>VGDevAcida</p>
+        <div class="content">
+            <div id="unityPlayer">
+                <div class="missing">
+                    <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+                        <img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+                    </a>
+                </div>
+                <div class="broken">
+                    <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
+                        <img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+        Controls:<br/>
+        Steer with the mouse, Forward/Reverse - W/S, Left/Right - A/D<br/>
+        Fire - Left Mouse Button<br/>
+        This was our semester project for Video Game Design. I worked on this in a group with Austin Stoner and Cullen McDevitt. I was in charge of making the Asteroids deform with Marching Squares.
+        Each Asteroid is defined by a two dimensional array, which indicates how much each point on the asteroid is damaged. As the player hits the asteroids, they deform. I was also in charge of the basic control system and lasers.<br/>
+        
+        <p class = "text-center"><h6>Contact me at <a href = "mailto:adalynne.quesenberry713@gmail.com">adalynne.quesenberry713@gmail.com</a></h6></p>
+    </div>
+    </body>
 </html>
